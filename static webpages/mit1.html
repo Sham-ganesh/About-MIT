@@ -1,0 +1,407 @@
+<html lang="">
+<head>
+<title>Oleald</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+*{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	font-family:helvetica;
+	font-size:20px;
+}
+
+body{
+	background-image:linear-gradient(#ededed,#e3e3e3,#d9d9d9);
+}
+
+
+.container {
+  padding: 2px 4px;
+}
+
+  .about{
+      padding: 2rem 3rem;
+  }
+
+ 
+  .about h2 span{
+      width: 5px;
+      height: 100%;
+      background-color: #cd0a0a;
+      margin-right: 1rem;
+      border-radius: 2px;
+  }
+
+h1
+{
+	font-family:helvetica;
+	font-size:35px;
+	color:#990000;
+	font-weight:bold;
+	
+}
+
+a{
+	display:block;
+	padding:10px 0;
+	color:#fff;
+	text-decoration:none;
+}
+  .numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+}
+.n-item{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background-color: #cd0a0a;
+    margin: 2rem 3rem;
+}
+
+.main-menu{
+	display:flex;
+	margin-top:20px;
+	transition: .4s ease-in-out
+}
+.main-menu>li{
+	flex:1;
+	text-align:center;
+	transition: .4s ease-in-out
+}
+
+.main-menu>li>a{
+	background:linear-gradient(to bottom, #3169de, #131e33);
+}
+
+.sub-menu-layout-1>li>a{
+	background:linear-gradient(to bottom, #6b8dcf,#485775);
+}
+
+.sub-menu-layout-2>li>a{
+	background:linear-gradient(to bottom, #99b0de, #586070);
+	transition: .4s ease-in-out;
+}
+
+.main-menu>li:not(:first-child){
+	margin-left:1px;
+	transition: .4s ease-in-out
+}
+
+.sub-menu-layout-1>li{
+	margin-top:1px;
+}
+
+.sub-menu-2{
+	position:relative;
+	transition: .4s ease-in-out;
+}
+.sub-menu-layout-2{
+	position:absolute;
+	width:100%;
+	left:100%;
+	top:0%;
+	transition: .4s ease-in-out;
+}
+
+.sub-menu-layout-2>li:not(:first-child){
+	margin-top:1px;
+	transition: .4s ease-in-out
+}
+
+.sub-menu-layout-2{
+	margin-left:1px;
+	transition: .4s ease-in-out;
+}
+
+.sub-menu>a:after{
+	content:"";
+	width:10px;
+	height:10px;
+	display:inline-block;
+	border-right:3px solid #fff;
+	border-bottom:3px solid #fff;
+	margin-left:10px;
+	transform:rotate(45deg);
+	position:relative;
+	transition:1s transform ease;
+}
+
+.sub-menu-2>a:after{
+	transform:rotate(315deg);
+        transition: .4s ease-in-out;
+}
+
+li>a:hover{
+	font-size:21px;
+	transition: .4s ease-in-out
+
+}
+
+.sub-menu-layout{
+	display:none;
+	transition: .4s ease-in-out
+}
+
+.sub-menu-1:hover .sub-menu-layout-1,
+.sub-menu-2:hover .sub-menu-layout-2{
+	display:block;
+	transition: .4s ease-in-out;
+}
+
+.sub-menu-1:hover>a:after{
+	transform:rotate(-135deg);
+	top:3px;
+        transition: .4s ease-in-out;
+}
+
+.sub-menu-2:hover>a:after{
+	transform:rotate(135deg);
+        transition: .4s ease-in-out;
+	
+}
+
+@media screen and (max-width:500px){
+	.main-menu{
+		flex-direction:column;
+	}
+	.sub-menu-1,.sub-menu-layout-2{
+		position:static;
+	}
+	.main-menu>li:not(:first-child){
+		margin-left:0;
+		margin-top:1px;
+	}
+	
+	.sub-menu-layout li:nth-child(n){
+		margin:1px 0 0 0;
+	}
+	
+	.sub-menu-2>a:after{
+		transform:rotate(45deg);
+	}
+	
+	.sub-menu-2:hover>a:after{
+		transform:rotate(-135deg);
+		top:3px;
+	}
+	
+	.sub-menu-layout-1,.sub-menu-layout-2{
+		display:block;
+		margin:0;
+		max-height:0px;
+		overflow:hidden;
+		transition:6s all ease;
+	}
+	
+	.sub-menu-1:hover .sub-menu-layout-1,
+	.sub-menu-2:hover .sub-menu-layout-2{
+		max-height:280px;
+	}
+}
+
+</style>
+</head>
+<body id="top">
+<div class="bgded overlay light" style="background-image:url('https://im.indiatimes.in/content/itimes/photo/2016/Oct/14/1476446792-apj-abdul-kalam-on-dreams-coming-true.jpg?w=1400&h=932&cc=1);"> 
+  <div class="wrapper row0">
+<ul class="main-menu">
+			<li><a href="#">HOME</a></li>
+			<li class="sub-menu sub-menu-1"><a href="#">ABOUT US</a>
+				<ul class="sub-menu-layout sub-menu-layout-1">
+					<li><a href="#">ANNA UNIVERSITY</a></li>
+					<li><a href="#">MIT</a></li>
+					<li><a href="#">CT DEPARTMENT</a></li>
+					<li><a href="#">Organisation Chart</a></li>
+				</ul>
+			</li></li>
+			
+			<li class="sub-menu sub-menu-1"><a href="#">Academics</a>
+				<ul class="sub-menu-layout sub-menu-layout-1">
+					<li class="sub-menu sub-menu-2"><a href="#">UG</a>
+						<ul class="sub-menu-layout sub-menu-layout-2">
+							<li><a href="#">Curriculum</a></li>
+							<li><a href="#">Syllabus</a></li>
+							<li><a href="#">Sessions</a></li>
+						</ul>
+					<li class="sub-menu sub-menu-2"><a href="#">PG</a>
+						<ul class="sub-menu-layout sub-menu-layout-2">
+							<li><a href="#">Curriculum</a></li>
+							<li><a href="#">Syllabus</a></li>
+							<li><a href="#">Sessions</a></li>
+						</ul>
+					</li>
+					<li class="sub-menu sub-menu-2"><a href="#">PhD</a>
+						<ul class="sub-menu-layout sub-menu-layout-2">
+							<li><a href="#">Curriculum</a></li>
+							<li><a href="#">Syllabus</a></li>
+							<li><a href="#">Sessions</a></li>
+						</ul>
+				</ul>
+			</li>
+			<li class="sub-menu sub-menu-1"><a href="#">People</a>
+				<ul class="sub-menu-layout sub-menu-layout-1">
+					<li><a href="#">Faculty</a></li>
+					<li><a href="#">Students</a></li>
+					<li><a href="#">Admin Staff</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Research</a></li>
+			<li><a href="#">Placements</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	<br>	
+
+	<div id="pageintro" class="hoc clear"> 
+    
+	<article>
+	<br><br>
+	<br><br>
+      
+    </article>
+  </div>
+</div>
+</div>
+
+<br>
+<div class="w3-container w3-animate-zoom">
+        <div class="about">
+            <h2><span>&nbsp;</span>WELCOME TO MADRAS INSTITUTE OF TECHNOLOGY</h2>
+		</div>
+</div>
+ <div class="vision-mission">
+	<div class="numbers">
+            <div class="n-item">
+               <div>
+			   <h2>RESEARCH</h2>
+				<br>		
+				<img src='https://pbs.twimg.com/profile_images/416470137861328896/Kch7r6Pt.jpeg' style='height:210px'>
+                </div>
+				<br>
+				<div class="w3-container">
+					<a href="#" class="w3-button w3-darkred w3-block" >VIEW MORE</a>
+				</div>
+            </div>
+            <div class="n-item">            
+                <div>
+                    <h2>LIBRARY </h2>
+				<br>
+                <img src='https://www.detroitlabs.com/wp-content/uploads/2018/02/alfons-morales-YLSwjSy7stw-unsplash.jpg' style='height:210px'>
+				</div><br>
+				<div class="w3-container">
+					<a href="#" class="w3-button w3-darkred w3-block" >VIEW MORE</a>
+				</div>
+            </div>
+            <div class="n-item">
+                <div>
+                    <h2>PLACEMENTS</h2>
+               <br>
+			   <img src='https://www.forbesindia.com/media/images/2020/Apr/img_131773_educationandjoboffer.jpg' style='height:210px'>
+				</div><br>
+				<div class="w3-container">
+					<a href="#" class="w3-button w3-darkred w3-block" >VIEW MORE</a>
+				</div>
+            </div>
+            <div class="n-item">            
+                <div>
+                    <h2>ACCREDITATION</h2>
+               <br>
+                <img src='https://eduvoice.in/wp-content/uploads/2020/03/accreditation-4.png' style='height:210px'>
+				</div><br>
+				<div class="w3-container">
+					<a href="#" class="w3-button w3-darkred w3-block" >VIEW MORE</a>
+				</div>
+            </div>
+        </div>
+  </div>
+<br>
+
+<div class="wrapper row2 bgded overlay" style="background-image:url('https://www.mitindia.edu/Mit_Codes_custom/MIT_banner/img/landscape/01.jpg')">
+  <section class="hoc container clear"> 
+    <div class="sectiontitle">
+	<br>
+	<br>
+      <h6 class="heading">DEPARTMENTS</h6>
+      <br>
+	   </div>
+    <ul class="nospace group overview">
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-headphones"></i></a>
+          <h6 class="heading"><a href="#">Aerospace Engineering</a></h6>
+          <p>Sed non vulputate arcu nullam eu massa vitae urna vulputate efficitur in et&hellip;</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-asl-interpreting"></i></a>
+          <h6 class="heading"><a href="#"> Automobile    Engineering</a></h6>
+          <p>Mauris eu tristique aenean dapibus facilisis risus sed vestibulum sed vitae&hellip;</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-area-chart"></i></a>
+          <h6 class="heading"><a href="#"> Electronics    Engineering</a></h6>
+          <p>Pulvinar nulla elementum massa ut fermentum accumsan nulla luctus at risus&hellip;</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-balance-scale"></i></a>
+          <h6 class="heading"><a href="#">Instrumentation  Engineering</a></h6>
+          <p>Vitae est eu felis ultrices tristique morbi eget libero ultricies semper enim&hellip;</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-comments-o"></i></a>
+          <h6 class="heading"><a href="#"> Computer  Technology</a></h6>
+          <p>Et malesuada fames ac ante ipsum primis in faucibus duis volutpat gravida nisi&hellip;</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-gears"></i></a>
+          <h6 class="heading"><a href="#">Information  Technology</a></h6>
+          <p>Aliquam lorem lorem ac iaculis eros pulvinar nec vivamus vestibulum nisl sem&hellip;</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+	   <li class="one_third">
+        <article><a href="#"><i class="fa fa-headphones"></i></a>
+          <h6 class="heading"><a href="#"> Production    Technology</a></h6>
+          <p>Sed non vulputate arcu nullam eu massa vitae urna vulputate efficitur in et&hellip;</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li> <li class="one_third">
+        <article><a href="#"><i class="fa fa-headphones"></i></a>
+          <h6 class="heading"><a href="#">Rubber & Plastics Technology</a></h6>
+          <p>Sed non vulputate arcu nullam eu massa vitae urna vulputate efficitur in et&hellip;</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li> <li class="one_third">
+        <article><a href="#"><i class="fa fa-headphones"></i></a>
+          <h6 class="heading"><a href="#">AppliedScience and Humanites</a></h6>
+          <p>Sed non vulputate arcu nullam eu massa vitae urna vulputate efficitur in et&hellip;</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+    </ul>
+    <footer class="center"><a class="btn" href="#">Quis vehicula nulla</a></footer>
+  </section>
+</div>
+
+
+<br>
+<br>
+
+<br>
+</body>
+
+</html>
