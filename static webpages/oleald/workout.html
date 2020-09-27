@@ -1,0 +1,643 @@
+<html lang="">
+<head>
+<title>Oleald</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+*{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	font-family:helvetica;
+	font-size:20px;
+}
+
+body{
+	background-image:linear-gradient(#ededed,#e3e3e3,#d9d9d9);
+}
+
+
+.container {
+  padding: 2px 4px;
+}
+
+  .about{
+      padding: 2rem 3rem;
+  }
+
+ 
+  .about h2 span{
+      width: 10px;
+      height: 100%;
+      background-color:#990000;
+      margin-right: 1rem;
+      border-radius: 2px;
+	  font-family:helvetica;
+	  font-weight:bold;
+  }
+
+	
+	  .im1 {
+	  margin-top:10px;
+	  margin-left:50px;
+	   border:2px solid black;
+	   border-radius:15px;
+	   width:40%; 
+	   height:600px;
+	   box-shadow: 10px 10px 5px grey;
+   }
+   .container1 {
+		width: 100%;
+		height:100%;
+		margin-top:50px;
+	}
+
+	.gallery1 {
+		display: grid;
+		grid-template-columns: repeat(8, 1fr);
+		grid-template-rows: repeat(8, 5vw);
+		grid-gap: 2px;
+		background-color:white;  
+	}
+
+	.gallery__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block; 
+	}
+
+	.gallery__item--1 {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+
+	.gallery__item--2 {
+		grid-column-start: 3;
+		grid-column-end: 5;
+		grid-row-start: 1;
+		grid-row-end: 3;
+	}
+
+	.gallery__item--3 {
+		grid-column-start: 5;
+		grid-column-end: 9;
+		grid-row-start: 1;
+		grid-row-end: 6;
+	}
+
+	.gallery__item--4 {
+		grid-column-start: 1;
+		grid-column-end: 5;
+		grid-row-start: 3;
+		grid-row-end: 6;
+	}
+
+	.gallery__item--5 {
+		grid-column-start: 1;
+		grid-column-end: 5;
+		grid-row-start: 6;
+		grid-row-end: 9;
+	}
+
+	.gallery__item--6 {
+		grid-column-start: 5;
+		grid-column-end: 9;
+		grid-row-start: 6;
+	grid-row-end: 9;
+	}
+
+	.cont1 {
+		position: relative;
+		width: 100%;
+		height:100%;
+	}
+
+	.image {
+	  display: block;
+	  width: 100%;
+	  height: auto;
+	}
+
+	.overlay1 {
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  height: 100%;
+	  width: 100%;
+	  opacity: 0;
+	  transition: .5s ease;
+	  background-color:#576574;
+	}
+
+	.cont1:hover .overlay1 {
+	  opacity: 1;
+	}
+
+	.text1 {
+	  color: white;
+	  font-size: 40px;
+	  text-align: center;
+	  margin-top:50px;
+	  font-family: 'Bungee Shade', cursive;
+	}
+
+.over1 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.over1-content1 {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: left;
+  margin-top: 30px;
+  margin-left:40%;
+  margin-right:auto;
+}
+
+.over1 a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  }
+
+.over1 a:hover, .overlay1 a:focus {
+  color: white;
+}
+
+.over1 .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+h1
+{
+	font-family:helvetica;
+	font-size:35px;
+	color:#990000;
+	font-weight:bold;
+	
+}
+
+.headddd
+{
+	font-family:helvetica;
+	font-size:35px;
+	color:#990000;
+	font-weight:bold;
+	
+}
+  .vision-mission{
+    z-index: 10;
+    background-color: #F4F0EB;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+a{
+	display:block;
+	padding:10px 0;
+	color:#fff;
+	text-decoration:none;
+}
+  .numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+}
+.n-item{
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background-color: #cd0a0a;
+    margin: 2rem 3rem;
+}
+
+.main-menu{
+	display:flex;
+	margin-top:20px;
+	transition: .4s ease-in-out
+}
+.main-menu>li{
+	flex:1;
+	text-align:center;
+	transition: .4s ease-in-out
+}
+
+.main-menu>li>a{
+	background:linear-gradient(to bottom, #3169de, #131e33);
+}
+
+.sub-menu-layout-1>li>a{
+	background:linear-gradient(to bottom, #6b8dcf,#485775);
+}
+
+.sub-menu-layout-2>li>a{
+	background:linear-gradient(to bottom, #99b0de, #586070);
+	transition: .4s ease-in-out;
+}
+
+.main-menu>li:not(:first-child){
+	margin-left:1px;
+	transition: .4s ease-in-out
+}
+
+.sub-menu-layout-1>li{
+	margin-top:1px;
+}
+
+.sub-menu-2{
+	position:relative;
+	transition: .4s ease-in-out;
+}
+.sub-menu-layout-2{
+	position:absolute;
+	width:100%;
+	left:100%;
+	top:0%;
+	transition: .4s ease-in-out;
+}
+
+.sub-menu-layout-2>li:not(:first-child){
+	margin-top:1px;
+	transition: .4s ease-in-out
+}
+
+.sub-menu-layout-2{
+	margin-left:1px;
+	transition: .4s ease-in-out;
+}
+
+.sub-menu>a:after{
+	content:"";
+	width:10px;
+	height:10px;
+	display:inline-block;
+	border-right:3px solid #fff;
+	border-bottom:3px solid #fff;
+	margin-left:10px;
+	transform:rotate(45deg);
+	position:relative;
+	transition:1s transform ease;
+}
+
+.sub-menu-2>a:after{
+	transform:rotate(315deg);
+        transition: .4s ease-in-out;
+}
+
+li>a:hover{
+	font-size:21px;
+	transition: .4s ease-in-out
+
+}
+
+.sub-menu-layout{
+	display:none;
+	transition: .4s ease-in-out
+}
+
+.sub-menu-1:hover .sub-menu-layout-1,
+.sub-menu-2:hover .sub-menu-layout-2{
+	display:block;
+	transition: .4s ease-in-out;
+}
+
+.sub-menu-1:hover>a:after{
+	transform:rotate(-135deg);
+	top:3px;
+        transition: .4s ease-in-out;
+}
+
+.sub-menu-2:hover>a:after{
+	transform:rotate(135deg);
+        transition: .4s ease-in-out;
+	
+}
+
+@media screen and (max-width:500px){
+	.main-menu{
+		flex-direction:column;
+	}
+	.sub-menu-1,.sub-menu-layout-2{
+		position:static;
+	}
+	.main-menu>li:not(:first-child){
+		margin-left:0;
+		margin-top:1px;
+	}
+	
+	.sub-menu-layout li:nth-child(n){
+		margin:1px 0 0 0;
+	}
+	
+	.sub-menu-2>a:after{
+		transform:rotate(45deg);
+	}
+	
+	.sub-menu-2:hover>a:after{
+		transform:rotate(-135deg);
+		top:3px;
+	}
+	
+	.sub-menu-layout-1,.sub-menu-layout-2{
+		display:block;
+		margin:0;
+		max-height:0px;
+		overflow:hidden;
+		transition:6s all ease;
+	}
+	
+	.sub-menu-1:hover .sub-menu-layout-1,
+	.sub-menu-2:hover .sub-menu-layout-2{
+		max-height:280px;
+	}
+}
+
+</style>
+</head>
+<body id="top">
+<div class="bgded overlay light" style="background-image:url('https://im.indiatimes.in/content/itimes/photo/2016/Oct/14/1476446792-apj-abdul-kalam-on-dreams-coming-true.jpg?w=1400&h=932&cc=1);"> 
+  <div class="wrapper row0">
+<ul class="main-menu">
+			<li><a href="#">HOME</a></li>
+			<li class="sub-menu sub-menu-1"><a href="#">ABOUT US</a>
+				<ul class="sub-menu-layout sub-menu-layout-1">
+					<li><a href="#">ANNA UNIVERSITY</a></li>
+					<li><a href="#">MIT</a></li>
+					<li><a href="#">CT DEPARTMENT</a></li>
+					<li><a href="#">Organisation Chart</a></li>
+				</ul>
+			</li></li>
+			
+			<li class="sub-menu sub-menu-1"><a href="#">Academics</a>
+				<ul class="sub-menu-layout sub-menu-layout-1">
+					<li class="sub-menu sub-menu-2"><a href="#">UG</a>
+						<ul class="sub-menu-layout sub-menu-layout-2">
+							<li><a href="#">Curriculum</a></li>
+							<li><a href="#">Syllabus</a></li>
+							<li><a href="#">Sessions</a></li>
+						</ul>
+					<li class="sub-menu sub-menu-2"><a href="#">PG</a>
+						<ul class="sub-menu-layout sub-menu-layout-2">
+							<li><a href="#">Curriculum</a></li>
+							<li><a href="#">Syllabus</a></li>
+							<li><a href="#">Sessions</a></li>
+						</ul>
+					</li>
+					<li class="sub-menu sub-menu-2"><a href="#">PhD</a>
+						<ul class="sub-menu-layout sub-menu-layout-2">
+							<li><a href="#">Curriculum</a></li>
+							<li><a href="#">Syllabus</a></li>
+							<li><a href="#">Sessions</a></li>
+						</ul>
+				</ul>
+			</li>
+			<li class="sub-menu sub-menu-1"><a href="#">People</a>
+				<ul class="sub-menu-layout sub-menu-layout-1">
+					<li><a href="#">Faculty</a></li>
+					<li><a href="#">Students</a></li>
+					<li><a href="#">Admin Staff</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Research</a></li>
+			<li><a href="#">Placements</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	<br>	
+
+	<div id="pageintro" class="hoc clear"> 
+    
+	<article>
+	<br><br>
+	<br><br>
+      
+    </article>
+  </div>
+</div>
+</div>
+
+<br>
+<div class="w3-container w3-animate-zoom">
+        <div class="about">
+            <h2 style='color:#990000;font-weight:bold'><span>&nbsp;</span>WELCOME  TO  MADRAS INSTITUTE OF TECHNOLOGY</h2>
+		<h2 style='color:black;font-size:30px;font-weight:bold'>A place for learning, discovery, innovation, expression and discourse</h2>
+		</div>
+</div>
+
+	<div class="numbers vision-mission">
+            <div class="n-item">
+               <div>
+			   <h2>RESEARCH</h2>
+				<br>		
+				<img src='https://pbs.twimg.com/profile_images/416470137861328896/Kch7r6Pt.jpeg' style='height:210px'>
+                </div>
+				<br>
+				<div class="w3-container">
+					<a href="#" class="w3-button w3-darkred w3-block" >VIEW MORE</a>
+				</div>
+            </div>
+            <div class="n-item">            
+                <div>
+                    <h2>LIBRARY </h2>
+				<br>
+                <img src='https://www.detroitlabs.com/wp-content/uploads/2018/02/alfons-morales-YLSwjSy7stw-unsplash.jpg' style='height:210px'>
+				</div><br>
+				<div class="w3-container">
+					<a href="#" class="w3-button w3-darkred w3-block" >VIEW MORE</a>
+				</div>
+            </div>
+            <div class="n-item">
+                <div>
+                    <h2>PLACEMENTS</h2>
+               <br>
+			   <img src='https://www.forbesindia.com/media/images/2020/Apr/img_131773_educationandjoboffer.jpg' style='height:210px'>
+				</div><br>
+				<div class="w3-container">
+					<a href="#" class="w3-button w3-darkred w3-block" >VIEW MORE</a>
+				</div>
+            </div>
+            <div class="n-item">            
+                <div>
+                    <h2>ACCREDITATION</h2>
+               <br>
+                <img src='https://eduvoice.in/wp-content/uploads/2020/03/accreditation-4.png' style='height:210px'>
+				</div><br>
+				<div class="w3-container">
+					<a href="#" class="w3-button w3-darkred w3-block" >VIEW MORE</a>
+				</div>
+            </div>
+        </div>
+<br>
+
+<div class="wrapper row2 bgded overlay" style="background-image:url('https://www.mitindia.edu/Mit_Codes_custom/MIT_banner/img/landscape/01.jpg')">
+  <section class="hoc container clear"> 
+    <div class="sectiontitle">
+	<br>
+	<br>
+      <h1 style='color:white'>DEPARTMENTS</h1>
+ 
+	   </div>
+    <ul class="nospace group overview">
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-headphones"></i></a>
+          <h6 class="heading"><a href="#">Aerospace Engineering</a></h6>
+          <p>The Department of Aerospace Engineering was started in 1949 as faculty of Aeronautics in the MIT Campus, for furthering the cause of Aerospace Education in the new born nation</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-gears"></i></a>
+          <h6 class="heading"><a href="#"> Automobile    Engineering</a></h6>
+          <p>The Department of Automobile Engineering at MIT was established in the year 1949, with under-graduate Programme in Automobile Engineering for Science graduates (B.Sc)</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-area-chart"></i></a>
+          <h6 class="heading"><a href="#"> Electronics    Engineering</a></h6>
+          <p>The Department of Electronics Engineering established in the year 1949 has its core strength in the area of &nbsp &nbsp &nbsp Electronics & Communication technology.<br></p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-balance-scale"></i></a>
+          <h6 class="heading"><a href="#">Instrumentation  Engineering</a></h6>
+          <p>The Department  of Instrumentation Engineering MIT Campus Anna University was established in the year of 1949.The core strength of the Instrumentation Engineering Department MIT Campus, Anna University is Process Control & Instrumentation.</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-comments-o"></i></a>
+          <h6 class="heading"><a href="#"> Computer  Technology</a></h6>
+          <p>Computer technology has become an integral part of our daily life. It is the most important element in the education of students. The department of Computer Technology was recently established in MIT campus of Anna University by bifurcating the department of Information Technology. </p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+      <li class="one_third">
+        <article><a href="#"><i class="fa fa-gears"></i></a>
+          <h6 class="heading"><a href="#">Information  Technology</a></h6>
+          <p>Keeping with the tradition of Anna University in offering new areas of specialization in engineering, the Department of Information Technology was instituted in the year 2001 with the objective of imparting knowledge in Information Technology and Computer Sciences.</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+	   <li class="one_third">
+        <article><a href="#"><i class="fa fa-gears"></i></a>
+          <h6 class="heading"><a href="#">Production Technology<br> <br>	</a></h6>
+          <p>This department started with three year B.Tech production engineering programme  in the year 1977 with an intake of 20 students and M.E programme in the year 1993. </p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li> <li class="one_third">
+        <article><a href="#"><i class="fa fa-gears"></i></a>
+          <h6 class="heading"><a href="#">Rubber & Plastics Technology</a></h6>
+          <p>The Department of Rubber and Plastics Technology was started in the year 1988 and offers a four year degree programme in B.Tech  and a two year programme degree program in M.Tech</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li> <li class="one_third">
+        <article><a href="#"><i class="fa fa-area-chart"></i></a>
+          <h6 class="heading"><a href="#">AppliedScience and Humanites</a></h6>
+          <p>The Division of Applied Science and Humanities has four disciplines: Mathematics, Physics, Chemistry and English. Powered by enthusiastic and experienced faculty members</p>
+          <footer><a href="#">View Details &raquo;</a></footer>
+        </article>
+      </li>
+    </ul>
+    <footer class="center"><a class="btn" href="#">KNOW MORE ABOUT MIT</a></footer>
+  </section>
+</div>
+ <div class="about">
+            <h2 style='color:#990000;font-weight:bold'><span>&nbsp;</span>GALLERY<h2>
+		<h2 style='color:black;font-size:25px;font-weight:bold'>Highlights of MIT</h2>
+		</div>
+<section class="section1" >
+			<div class="container1">
+				<div class="gallery1">
+					<div class="gallery__item gallery__item--1" style="background-color:#218c74">
+						<div class="cont1" id="next">
+							<img src="https://images.shiksha.com/mediadata/images/1511249655phpguX3ED.png" alt="Gallery image 2" class="gallery__img1">
+								<div class="overlay1">
+									<div class="text1">RAJAM HALL</div>
+								</div>
+						</div>
+					</div>
+				
+					<div class="gallery__item gallery__item--2" >
+						<a href="contact_me.html">
+							<div class="cont1">
+                    <img src="https://www.mitindia.edu/images/mit/college_higlights/MIT%20Play%20Gound.jpg" alt="Gallery image 2" class="gallery__img">
+					  <div class="overlay1">
+    <div class="text1">PLAYGROUND</div>
+  </div></a>
+</div>
+                  
+				   
+	        </div>
+                <div class="gallery__item gallery__item--3" >
+				<a href="edu.html#next">
+				<div class="cont1">
+                    <img src="https://cdn-0.enacademic.com/pictures/enwiki/79/Oat_of_MIT_chennai.jpg" alt="Gallery image 3" class="gallery__img">
+					  <div class="overlay1">
+    <div class="text1">OPEN AIR THEATRE</div>
+  </div>
+</div></a>
+                </div>
+                <div class="gallery__item gallery__item--4" style="background-color:#aaa69d;">
+				<a href="where_live.html">
+                   					<div class="cont1">
+                    <img src="	https://www.mitindia.edu/Mit_Codes_custom/MIT_banner/img/landscape/04.jpg" alt="Gallery image 2" class="gallery__img">
+					  <div class="overlay1">
+    <div class="text1">LIBRARY</div>
+  </div>
+</div></a></div>
+				
+                <div class="gallery__item gallery__item--5">
+				<a href="edu.html">
+					<div class="cont1">
+                    <img src="https://www.mitindia.edu/Mit_Codes_custom/MIT_banner/img/landscape/02.jpg  " alt="Gallery image 5" class="gallery__img">
+								   				  <div class="overlay1">
+    <div class="text1">LECTURE HALL COMPLEX</div>
+  </div>
+</div></a>
+        
+                </div>
+                <div class="gallery__item gallery__item--6" style="background:#38ada9;">
+				<a href="contact_me.html">
+				                   					<div class="cont1">
+                    <img src="https://5.imimg.com/data5/RO/EU/GLADMIN-9778792/aerospace-engineering-500x500.png" alt="Gallery image 2" class="gallery__img">
+					  <div class="overlay1">
+    <div class="text1">AIRCRAFTS</div>
+  </div>
+</div></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<br>
+<br>
+
+<br>
+</body>
+
+</html>
